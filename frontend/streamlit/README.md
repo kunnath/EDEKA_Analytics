@@ -80,6 +80,8 @@ To modify the dashboard's appearance or functionality:
 - Edit specific pages in the `frontend/streamlit/pages/` directory
 - Modify data access functions in `frontend/streamlit/utils.py`
 
+
+
 ## Final Demo Video
 
 Watch the final demo of the EDEKA Analytics Dashboard here:
