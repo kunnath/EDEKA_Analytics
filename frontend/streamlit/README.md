@@ -12,6 +12,14 @@ This dashboard provides comprehensive analytics and insights for EDEKA retail op
 - **Customer Analytics**: Customer segmentation and behavior analysis
 - **Store Performance**: Store-level metrics and regional performance
 
+---
+
+## Final Demo Notes
+
+- This version represents the final demo state of the dashboard.
+- All analytics features are functional, including customer segmentation and sales analysis.
+- For a walkthrough, see the video above.
+
 ## Prerequisites
 
 - Python 3.8 or higher
@@ -71,3 +79,9 @@ To modify the dashboard's appearance or functionality:
 - Edit the main page in `frontend/streamlit/Home.py`
 - Edit specific pages in the `frontend/streamlit/pages/` directory
 - Modify data access functions in `frontend/streamlit/utils.py`
+
+## Final Demo Video
+
+Watch the final demo of the EDEKA Analytics Dashboard here:
+
+[![EDEKA Analytics Dashboard Demo](https://img.youtube.com/vi/teDHyfId3JU/0.jpg)](https://youtu.be/teDHyfId3JU)
