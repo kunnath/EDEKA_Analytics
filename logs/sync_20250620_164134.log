@@ -1,0 +1,1032 @@
+2025-06-20 16:41:35 | INFO | Running sync for all tables
+2025-06-20 16:41:35 | INFO | Starting external data sync process
+2025-06-20 16:41:35 | INFO | Starting sync for table: sales
+2025-06-20 16:41:35 | INFO | Last sync time for sales: 2025-06-20 16:39:29.298293
+2025-06-20 16:41:35 | INFO | Using mock data for sales in development mode
+2025-06-20 16:41:35 | INFO | Fetched 100 records from external database
+2025-06-20 16:41:35 | INFO | Transformed data for sales
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.ForeignKeyViolation) insert or update on table "sales" violates foreign key constraint "sales_product_id_fkey"
+DETAIL:  Key (product_id)=(168) is not present in table "products".
+
+[SQL: INSERT INTO sales (bill_id, product_id, customer_id, quantity, unit_price, store_id, purchase_date, total_price) VALUES (%(bill_id)s, %(product_id)s, %(customer_id)s, %(quantity)s, %(unit_price)s, %(store_id)s, %(purchase_date)s, %(total_price)s)]
+[parameters: {'bill_id': 'INV-000001', 'product_id': 168, 'customer_id': 175, 'quantity': 10, 'unit_price': 47.0, 'store_id': 9, 'purchase_date': Timestamp('2024-10-23 16:41:35'), 'total_price': 470.0}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000002'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000003'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000004'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000005'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000006'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000007'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000008'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000009'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000010'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000011'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000012'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000013'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000014'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000015'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000016'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000017'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000018'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000019'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000020'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000021'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000022'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000023'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000024'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000025'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000026'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000027'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000028'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000029'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000030'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000031'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000032'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000033'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000034'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000035'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000036'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000037'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000038'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000039'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000040'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000041'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000042'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000043'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000044'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000045'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000046'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000047'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000048'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000049'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000050'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000051'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000052'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000053'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000054'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000055'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000056'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000057'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000058'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000059'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000060'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000061'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000062'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000063'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000064'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000065'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000066'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000067'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000068'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000069'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000070'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000071'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000072'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000073'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000074'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000075'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000076'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000077'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000078'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000079'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000080'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000081'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000082'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000083'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000084'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000085'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000086'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000087'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000088'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000089'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000090'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000091'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000092'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000093'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000094'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000095'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000096'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000097'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000098'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000099'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM sales WHERE bill_id = %(pk_value)s]
+[parameters: {'pk_value': 'INV-000100'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | INFO | Inserted: 0, Updated: 0, Failed: 100
+2025-06-20 16:41:35 | INFO | Completed sync for table: sales
+2025-06-20 16:41:35 | INFO | Starting sync for table: products
+2025-06-20 16:41:35 | INFO | Last sync time for products: 2025-06-20 16:39:29.306565
+2025-06-20 16:41:35 | INFO | Using mock data for products in development mode
+2025-06-20 16:41:35 | INFO | Fetched 100 records from external database
+2025-06-20 16:41:35 | INFO | Transformed data for products
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type integer: "Produce"
+LINE 1: ..., created_at, updated_at) VALUES (1, 'Product 1', 'Produce',...
+                                                             ^
+
+[SQL: INSERT INTO products (product_id, name, category_id, price, description, created_at, updated_at) VALUES (%(product_id)s, %(name)s, %(category_id)s, %(price)s, %(description)s, %(created_at)s, %(updated_at)s)]
+[parameters: {'product_id': 1, 'name': 'Product 1', 'category_id': 'Produce', 'price': 65.29, 'description': 'Description for product 1', 'created_at': '2024-12-27 16:41:35', 'updated_at': '2025-06-20 16:41:35'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 2}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 3}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 4}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 5}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 6}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 7}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 8}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 9}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 10}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 11}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 12}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 13}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 14}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 15}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 16}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 17}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 18}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 19}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 20}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 21}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 22}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 23}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 24}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 25}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 26}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 27}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 28}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 29}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 30}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 31}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 32}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 33}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 34}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 35}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 36}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 37}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 38}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 39}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 40}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 41}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 42}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 43}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 44}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 45}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 46}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 47}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 48}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 49}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 50}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 51}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 52}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 53}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 54}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 55}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 56}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 57}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 58}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 59}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 60}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 61}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 62}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 63}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 64}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 65}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 66}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 67}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 68}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 69}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 70}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 71}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 72}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 73}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 74}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 75}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 76}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 77}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 78}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 79}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 80}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 81}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 82}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 83}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 84}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 85}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 86}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 87}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 88}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 89}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 90}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 91}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 92}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 93}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 94}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 95}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 96}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 97}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 98}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 99}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | ERROR | Error processing record: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT 1 FROM products WHERE product_id = %(pk_value)s]
+[parameters: {'pk_value': 100}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-06-20 16:41:35 | INFO | Inserted: 0, Updated: 0, Failed: 100
+2025-06-20 16:41:35 | INFO | Completed sync for table: products
+2025-06-20 16:41:35 | INFO | Starting sync for table: customers
+2025-06-20 16:41:35 | INFO | Last sync time for customers: 2025-06-20 16:39:29.314406
+2025-06-20 16:41:35 | INFO | Using mock data for customers in development mode
+2025-06-20 16:41:35 | INFO | Fetched 100 records from external database
+2025-06-20 16:41:35 | INFO | Transformed data for customers
+2025-06-20 16:41:35 | INFO | Inserted: 100, Updated: 0, Failed: 0
+2025-06-20 16:41:35 | INFO | Completed sync for table: customers
+2025-06-20 16:41:35 | INFO | Sync completed in 0.17 seconds
+2025-06-20 16:41:35 | INFO | Total records fetched: 300
+2025-06-20 16:41:35 | INFO | Total records inserted: 100
+2025-06-20 16:41:35 | INFO | Total records updated: 0
+2025-06-20 16:41:35 | INFO | Total records failed: 200
+2025-06-20 16:41:35 | INFO | Sync completed: {'fetched': 300, 'inserted': 100, 'updated': 0, 'failed': 200, 'duration': 0.17133307456970215}

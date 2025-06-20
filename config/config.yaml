@@ -1,0 +1,91 @@
+databases:
+  internal:
+    type: postgresql
+    host: ${INTERNAL_DB_HOST}
+    port: ${INTERNAL_DB_PORT}
+    database: ${INTERNAL_DB_NAME}
+    username: ${INTERNAL_DB_USER}
+    password: ${INTERNAL_DB_PASSWORD}
+    pool_size: 5
+    max_overflow: 10
+    
+  external:
+    type: mysql
+    host: ${EXTERNAL_DB_HOST}
+    port: ${EXTERNAL_DB_PORT}
+    database: ${EXTERNAL_DB_NAME}
+    username: ${EXTERNAL_DB_USER}
+    password: ${EXTERNAL_DB_PASSWORD}
+    pool_size: 5
+    max_overflow: 10
+
+# Column mappings between external and internal databases
+column_mappings:
+  sales:
+    external_table: external_sales
+    mappings:
+      bill_id: invoice_number
+      product_id: external_product_id
+      customer_id: customer_number
+      quantity: product_quantity
+      unit_price: price_per_unit
+      total_price: total_amount
+      purchase_date: transaction_date
+      store_id: store_number
+      
+  products:
+    external_table: external_products
+    mappings:
+      product_id: external_product_id
+      name: product_name
+      category_id: product_category
+      price: default_price
+      
+  customers:
+    external_table: external_customers
+    mappings:
+      customer_id: customer_number
+      first_name: customer_first_name
+      last_name: customer_last_name
+      email: email_address
+      phone: phone_number
+      
+  stores:
+    external_table: external_stores
+    mappings:
+      store_id: store_number
+      name: store_name
+      address: store_address
+      city: store_city
+      postal_code: store_postal
+      phone: store_phone
+      
+# Transformations to apply to data
+transformations:
+  date_columns:
+    - purchase_date
+    - registration_date
+  category_mapping:
+    1: "Produce"
+    2: "Dairy"
+    3: "Meat"
+    4: "Bakery"
+    5: "Frozen"
+    6: "Beverages"
+    7: "Snacks"
+    8: "Household"
+    9: "Health & Beauty"
+    10: "Other"
+
+# Sync configuration
+sync:
+  incremental: true
+  timestamp_column: last_updated
+  batch_size: 1000
+  max_retries: 3
+  retry_delay_seconds: 5
+  tables_to_sync:
+    - sales
+    - products
+    - customers
+    - stores
