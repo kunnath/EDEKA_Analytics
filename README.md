@@ -154,3 +154,10 @@ The dashboard includes:
 - Customer segmentation and behavior analytics
 - Store performance comparison
 # EDEKA_Analytics
+
+
+## Final Demo Video
+
+Watch the final demo of the EDEKA Analytics Dashboard here:
+
+[![EDEKA Analytics Dashboard Demo](https://img.youtube.com/vi/teDHyfId3JU/0.jpg)](https://youtu.be/teDHyfId3JU)
