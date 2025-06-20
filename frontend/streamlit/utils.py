@@ -49,7 +49,7 @@ def get_sales_data(days=30):
     start_date = end_date - timedelta(days=days)
     
     query = f"""
-    SELECT s.bill_id, s.purchase_date, s.quantity, s.unit_price, s.total_price,
+    SELECT s.bill_id, s.customer_id, s.purchase_date, s.quantity, s.unit_price, s.total_price,
            p.name as product_name, p.category_id,
            c.first_name, c.last_name,
            st.name as store_name, st.city
@@ -156,66 +156,129 @@ def get_store_performance():
 @st.cache_data(ttl=600)
 def get_customer_segments():
     """Get customer segments based on purchase behavior."""
-    query = """
-    SELECT 
-        c.customer_id,
-        c.first_name,
-        c.last_name,
-        COUNT(DISTINCT s.bill_id) as num_transactions,
-        SUM(s.total_price) as total_spend,
-        AVG(s.total_price) as avg_transaction_value,
-        MAX(s.purchase_date) as last_purchase_date
-    FROM customers c
-    JOIN sales s ON c.customer_id = s.customer_id
-    GROUP BY c.customer_id, c.first_name, c.last_name
-    """
-    df = get_data(query)
-    if not df.empty:
-        # Add RFM segments
+    try:
+        query = """
+        SELECT 
+            c.customer_id,
+            c.first_name,
+            c.last_name,
+            COUNT(DISTINCT s.bill_id) as num_transactions,
+            SUM(s.total_price) as total_spend,
+            AVG(s.total_price) as avg_transaction_value,
+            MAX(s.purchase_date) as last_purchase_date
+        FROM customers c
+        LEFT JOIN sales s ON c.customer_id = s.customer_id
+        GROUP BY c.customer_id, c.first_name, c.last_name
+        """
+        df = get_data(query)
+        
+        if df.empty:
+            return pd.DataFrame()
+            
+        # Replace NaN values with appropriate defaults
+        df['num_transactions'] = df['num_transactions'].fillna(0)
+        df['total_spend'] = df['total_spend'].fillna(0)
+        df['avg_transaction_value'] = df['avg_transaction_value'].fillna(0)
+        
+        # For customers with no purchases, use registration date as last purchase
+        customer_data = get_customer_data()
+        if not customer_data.empty:
+            # Create a mapping of customer_id to registration_date
+            customer_reg_dates = dict(zip(customer_data['customer_id'], pd.to_datetime(customer_data['registration_date'])))
+            
+            # Fill missing last_purchase_date with registration_date
+            for idx, row in df.iterrows():
+                if pd.isna(row['last_purchase_date']) and row['customer_id'] in customer_reg_dates:
+                    df.at[idx, 'last_purchase_date'] = customer_reg_dates[row['customer_id']]
+        
+        # Convert to datetime after handling missing values
         df['last_purchase_date'] = pd.to_datetime(df['last_purchase_date'])
+        
+        # Fill any remaining NaNs with a default old date
+        default_date = datetime.now() - timedelta(days=365)  # Default to 1 year ago
+        df['last_purchase_date'] = df['last_purchase_date'].fillna(default_date)
+        
+        # Calculate days since purchase
         df['days_since_purchase'] = (datetime.now() - df['last_purchase_date']).dt.days
         
-        # Segment customers
-        df['recency_score'] = pd.qcut(df['days_since_purchase'], 3, labels=[3, 2, 1])
-        df['frequency_score'] = pd.qcut(df['num_transactions'].rank(method='first'), 3, labels=[1, 2, 3])
-        df['monetary_score'] = pd.qcut(df['total_spend'].rank(method='first'), 3, labels=[1, 2, 3])
+        # Segment customers - using try/except to handle any quantile errors
+        try:
+            # Handle the case where there might not be enough data for 3 quantiles
+            if len(df) >= 3:
+                # For recency, lower is better (more recent)
+                recency_bins = [0, 30, 90, df['days_since_purchase'].max()]
+                recency_labels = [3, 2, 1]
+                df['recency_score'] = pd.cut(df['days_since_purchase'], bins=recency_bins, labels=recency_labels, include_lowest=True)
+                
+                # For frequency and monetary, higher is better
+                if df['num_transactions'].nunique() >= 3:
+                    df['frequency_score'] = pd.qcut(df['num_transactions'].rank(method='first'), 3, labels=[1, 2, 3])
+                else:
+                    df['frequency_score'] = df['num_transactions'].apply(lambda x: 3 if x >= 5 else (2 if x >= 2 else 1))
+                    
+                if df['total_spend'].nunique() >= 3:
+                    df['monetary_score'] = pd.qcut(df['total_spend'].rank(method='first'), 3, labels=[1, 2, 3])
+                else:
+                    df['monetary_score'] = df['total_spend'].apply(lambda x: 3 if x >= 500 else (2 if x >= 100 else 1))
+            else:
+                # Not enough data for quantiles, use simple scoring
+                df['recency_score'] = df['days_since_purchase'].apply(lambda x: 3 if x <= 30 else (2 if x <= 90 else 1))
+                df['frequency_score'] = df['num_transactions'].apply(lambda x: 3 if x >= 5 else (2 if x >= 2 else 1))
+                df['monetary_score'] = df['total_spend'].apply(lambda x: 3 if x >= 500 else (2 if x >= 100 else 1))
+            
+            # Convert to string to create the RFM score
+            df['recency_score'] = df['recency_score'].astype(str)
+            df['frequency_score'] = df['frequency_score'].astype(str)
+            df['monetary_score'] = df['monetary_score'].astype(str)
+            
+            # Calculate RFM score
+            df['rfm_score'] = df['recency_score'] + df['frequency_score'] + df['monetary_score']
+            
+            # Add segment labels
+            segment_mapping = {
+                '111': 'Lost Customer',
+                '112': 'Lost Customer',
+                '113': 'Lost High Value',
+                '121': 'Lost Customer',
+                '122': 'Lost Customer',
+                '123': 'Lost High Value',
+                '131': 'Lost High Value',
+                '132': 'Lost High Value',
+                '133': 'Lost High Value',
+                '211': 'Low Value',
+                '212': 'Low Value',
+                '213': 'Medium Value',
+                '221': 'Low Value',
+                '222': 'Medium Value',
+                '223': 'Medium Value',
+                '231': 'Medium Value',
+                '232': 'Medium Value',
+                '233': 'High Value',
+                '311': 'New Customer',
+                '312': 'New Customer',
+                '313': 'Promising',
+                '321': 'Active',
+                '322': 'Active',
+                '323': 'Loyal',
+                '331': 'Loyal',
+                '332': 'Loyal',
+                '333': 'Champion'
+            }
+            
+            df['segment'] = df['rfm_score'].map(segment_mapping)
+            # Handle any missing mappings
+            df['segment'] = df['segment'].fillna('Other')
+            
+        except Exception as e:
+            print(f"Error during customer segmentation: {e}")
+            # Provide a basic segmentation as fallback
+            df['segment'] = 'Unsegmented'
         
-        # Calculate RFM score
-        df['rfm_score'] = df['recency_score'].astype(str) + df['frequency_score'].astype(str) + df['monetary_score'].astype(str)
-        
-        # Add segment labels
-        segment_mapping = {
-            '111': 'Lost Customer',
-            '112': 'Lost Customer',
-            '113': 'Lost High Value',
-            '121': 'Lost Customer',
-            '122': 'Lost Customer',
-            '123': 'Lost High Value',
-            '131': 'Lost High Value',
-            '132': 'Lost High Value',
-            '133': 'Lost High Value',
-            '211': 'Low Value',
-            '212': 'Low Value',
-            '213': 'Medium Value',
-            '221': 'Low Value',
-            '222': 'Medium Value',
-            '223': 'Medium Value',
-            '231': 'Medium Value',
-            '232': 'Medium Value',
-            '233': 'High Value',
-            '311': 'New Customer',
-            '312': 'New Customer',
-            '313': 'Promising',
-            '321': 'Active',
-            '322': 'Active',
-            '323': 'Loyal',
-            '331': 'Loyal',
-            '332': 'Loyal',
-            '333': 'Champion'
-        }
-        df['segment'] = df['rfm_score'].map(segment_mapping)
-    
-    return df
+        return df
+    except Exception as e:
+        print(f"Error in get_customer_segments: {e}")
+        traceback.print_exc()  # Print full traceback for easier debugging
+        return pd.DataFrame()
 
 @st.cache_data(ttl=600)
 def get_customer_data():

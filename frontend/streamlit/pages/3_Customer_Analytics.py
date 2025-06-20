@@ -276,6 +276,30 @@ try:
                     st.plotly_chart(fig, use_container_width=True)
                 else:
                     st.warning("No sales data available for customer segmentation.")
+                    # Show dummy data as example
+                    st.info("Showing example customer segmentation. This will be replaced with real data once sales information is available.")
+                    
+                    # Create sample segment data
+                    sample_segments = pd.DataFrame({
+                        'Segment': ['Champions', 'Loyal Customers', 'Potential Loyalists', 'At Risk', 'Needs Attention'],
+                        'Avg. Recency (days)': [15, 45, 60, 120, 200],
+                        'Avg. Frequency': [12, 8, 5, 3, 1],
+                        'Avg. Spend (€)': [1200, 800, 500, 300, 100],
+                        'Customer Count': [20, 30, 50, 40, 10]
+                    })
+                    
+                    st.subheader("Example Segment Characteristics")
+                    st.dataframe(sample_segments, use_container_width=True)
+                    
+                    # Create a sample pie chart
+                    fig = px.pie(
+                        sample_segments,
+                        values='Customer Count',
+                        names='Segment',
+                        title="Example Customer Segments Distribution",
+                        color_discrete_sequence=px.colors.qualitative.Set1
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
                 segments_summary = customer_purchase_data.groupby('segment').agg({
                     'recency': 'mean',
                     'frequency': 'mean',
